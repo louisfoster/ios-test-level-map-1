@@ -8,3 +8,4 @@ This one is for creating a "level" or "world", as in the environment in which th
 ### Contents
 
 - [Start](./start) (refers to this [commit](https://github.com/louisfoster/ios-test-level-map-1/commit/16342c72dc3a744084c1dfd54a84f2d0146f3361))
+- [Troubleshooting 0](./troubleshoot0) (refers to this [commit](https://github.com/louisfoster/ios-test-level-map-1/commit/6579c6ede1f0a3074eb45f66b7be74e3e97b6945))
