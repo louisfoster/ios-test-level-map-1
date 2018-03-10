@@ -47,19 +47,19 @@ class Map: SCNNode {
     
     func mapToObjects() {
         
-        for row in 0..<self.mapWidth {
+        for row in 0..<self.mapHeight {
             
-            for column in 0..<self.mapHeight {
+            for column in 0..<self.mapWidth {
                 
-                let matrixPosition = column + (row * self.mapHeight)
+                let matrixPosition = column + (row * self.mapWidth)
                     
                 if self.map[matrixPosition] == 0 {
                 
-                    self.addChildNode(self.createPlaneObject(x: Float(row), y: 0, z: Float(-column)))
+                    self.addChildNode(self.createPlaneObject(x: Float(column), y: 0, z: Float(-row)))
                 }
                 else {
                     
-                    self.addChildNode(self.createBoxObject(x: Float(row), y: 0.5, z: Float(-column)))
+                    self.addChildNode(self.createBoxObject(x: Float(column), y: 0.5, z: Float(-row)))
                 }
             }
         }

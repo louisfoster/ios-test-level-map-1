@@ -7,6 +7,17 @@ xcuserdata
 *xcworkspace/xcuserdata/*
 *.blend1
 *.kra-autosave.kra
+.DS_Store
+*.app.dSYM.zip
+build/
+*.xcuserdatad
+xcuserdata
+Pods/
+*.ipa
+*.xcuserstate
+*.xcworkspace/xcuserdata/*.xcuserdatad/
+*/*.xcodeproj/xcuserdata/
+fastlane/report.xml
 
 
 # Xcode
