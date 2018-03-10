@@ -23,17 +23,19 @@ class MainViewController: UIViewController {
         let map = Map()
         scene.rootNode.addChildNode(map)
         
+        let gimbal = Gimbal()
+        scene.rootNode.addChildNode(gimbal)
+        
         let camera = SCNNode()
         camera.camera = SCNCamera()
         camera.position = SCNVector3(x: 0, y: 10, z: 0)
         camera.look(at: SCNVector3(x: 0, y: 0, z: 0))
         scene.rootNode.addChildNode(camera)
         
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = .ambient
-        ambientLightNode.light!.color = UIColor.darkGray
-        scene.rootNode.addChildNode(ambientLightNode)
+//        let ambientLightNode = SCNNode()
+//        ambientLightNode.light = SCNLight()
+//        ambientLightNode.light!.type = .ambient
+//        scene.rootNode.addChildNode(ambientLightNode)
         
         self.sceneView?.allowsCameraControl = true
         self.sceneView?.showsStatistics = true

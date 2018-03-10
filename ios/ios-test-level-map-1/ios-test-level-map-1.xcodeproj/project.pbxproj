@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		35B9BD26A75C64FD2E0FD34F /* Pods_ios_test_level_map_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F363058FB4D143A1CA395AE /* Pods_ios_test_level_map_1.framework */; };
+		DE361D842053B36200193242 /* Gimbal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE361D832053B36200193242 /* Gimbal.swift */; };
+		DE361D872053B8C000193242 /* NodeHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE361D862053B8C000193242 /* NodeHelpers.swift */; };
+		DE361D892053C6DF00193242 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE361D882053C6DF00193242 /* Tile.swift */; };
 		DE3D56712052A12E00EBBECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3D56702052A12E00EBBECE /* AppDelegate.swift */; };
 		DE3D56782052A12E00EBBECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3D56772052A12E00EBBECE /* Assets.xcassets */; };
 		DE3D567B2052A12E00EBBECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3D56792052A12E00EBBECE /* LaunchScreen.storyboard */; };
@@ -21,6 +24,9 @@
 		3F363058FB4D143A1CA395AE /* Pods_ios_test_level_map_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_test_level_map_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D736882DFDA2DB20073288F /* Pods-ios-test-level-map-1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-test-level-map-1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-test-level-map-1/Pods-ios-test-level-map-1.debug.xcconfig"; sourceTree = "<group>"; };
 		B638BA555672759B2F40A773 /* Pods-ios-test-level-map-1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-test-level-map-1.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-test-level-map-1/Pods-ios-test-level-map-1.release.xcconfig"; sourceTree = "<group>"; };
+		DE361D832053B36200193242 /* Gimbal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gimbal.swift; sourceTree = "<group>"; };
+		DE361D862053B8C000193242 /* NodeHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHelpers.swift; sourceTree = "<group>"; };
+		DE361D882053C6DF00193242 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		DE3D566D2052A12E00EBBECE /* ios-test-level-map-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-test-level-map-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3D56702052A12E00EBBECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3D56772052A12E00EBBECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +67,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE361D852053B8B100193242 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DE361D862053B8C000193242 /* NodeHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DE3D56642052A12E00EBBECE = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +96,8 @@
 		DE3D566F2052A12E00EBBECE /* ios-test-level-map-1 */ = {
 			isa = PBXGroup;
 			children = (
-				DE3D568A2052AFC100EBBECE /* Map */,
+				DE361D852053B8B100193242 /* Helpers */,
+				DE3D568A2052AFC100EBBECE /* Nodes */,
 				DE3D56862052A70800EBBECE /* Main */,
 				DE3D56702052A12E00EBBECE /* AppDelegate.swift */,
 				DE3D56882052AC1600EBBECE /* art.scnassets */,
@@ -102,12 +117,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		DE3D568A2052AFC100EBBECE /* Map */ = {
+		DE3D568A2052AFC100EBBECE /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				DE361D832053B36200193242 /* Gimbal.swift */,
 				DE3D568B2052AFE700EBBECE /* Map.swift */,
+				DE361D882053C6DF00193242 /* Tile.swift */,
 			);
-			path = Map;
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE361D872053B8C000193242 /* NodeHelpers.swift in Sources */,
 				DE3D56712052A12E00EBBECE /* AppDelegate.swift in Sources */,
 				DE3D568C2052AFE700EBBECE /* Map.swift in Sources */,
+				DE361D892053C6DF00193242 /* Tile.swift in Sources */,
 				DE3D56842052A6BA00EBBECE /* MainViewController.swift in Sources */,
+				DE361D842053B36200193242 /* Gimbal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
